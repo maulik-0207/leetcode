@@ -17,6 +17,7 @@ class Solution(object):
         pre_roman = ""
         for roman in s:
             ans += (roman_dict[roman][1] - (roman_dict[roman_dict[roman][0]][1] if roman_dict[roman][0] == pre_roman else 0 ) - (roman_dict[roman_dict[roman][0]][1] if roman_dict[roman][0] == pre_roman else 0 ))
+            # ans += (roman_dict[roman][1] - ((roman_dict[roman_dict[roman][0]][1] if roman_dict[roman][0] == pre_roman else 0 )*2))
             pre_roman = roman
         return ans
         
